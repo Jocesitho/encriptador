@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="logica.js"></script>
+  <link rel="shortcut icon" href="logo e imagenes/Imagen1.png">
+  <title>Encriptador de texto</title>
+</head>
+<body>
+  <header>
+    <div>
+      <img class="logo" src="logo e imagenes/Imagen1.png" alt="Logo Alura" >
+    </div>
+  </header>
+  <main>
+    <section>
+      <textarea class="textArea" id="encriptador" cols="30" rows="10" placeholder="Ingrese texto aqui"></textarea>
+      <div>
+        <img  src="logo e imagenes/alert.svg" alt="signo de alerta" class="signo">
+        <h6 class="letrero">Solo letras minusculas y sin acentos</h6>
+      </div>
+      <div class="botones">
+        <button  id="botonEncriptar" class="boton-encriptar">Encriptar</button>
+        <button class="boton-desencriptar" id="botonDesencriptar" >Desencriptar</button>
+      </div>
+    </section>
+    <section>
+      <textarea  id="mensajeEncriptado" class="alerta-mensaje" cols="30" rows="10"></textarea>
+      <section>
+        <div>
+        <img id="imagenMuneco" src="logo e imagenes/muneco.png" alt="imagen">
+      </div>
+        <h2 class="text-h2" id="mensaje1">Ningun mensaje fue encontrado</h2>
+        <h3 class="text-h3" id="mensaje2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+      </section>
+      <div>
+        <button class="boton-copiar" id="botonCopiar">Copiar</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    var botonEn=document.querySelector("#botonEncriptar");
+    botonEn.onclick=encriptar;
+    var botonDes=document.querySelector("#botonDesencriptar");
+    botonDes.onclick=desencriptar;
+    var botonCopy=document.querySelector("#botonCopiar")
+    botonCopy.onclick=copiar;
+  </script>
+  <footer>
+    <p class="copyright">&copy Copyright Jose Arteaga - 2023</p>
+  </footer>
+</body>
+
+</html> 
